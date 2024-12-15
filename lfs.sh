@@ -47,9 +47,7 @@ done
 
 
 chmod ugo+x preparechroot.sh
-chmod ugo+x insidechroot.sh
-chmod ugo+x insidechroot2.sh
-chmod ugo+x insidechroot3.sh
+chmod ugo+x insidechroot*.sh
 chmod ugo+x teardownchroot.sh
 
 # ./chroot_bash.sh "$LFS" -c insidechroot.sh
@@ -57,7 +55,7 @@ chmod ugo+x teardownchroot.sh
 
 
 sudo ./preparechroot.sh "$LFS"
-for script in "/sources/insideroot.sh" "/sources/insideroot2.sh" "/sources/insideroot3.sh"; do
+for script in "/sources/insideroot.sh" "/sources/insideroot2.sh" "/sources/insideroot3.sh" "/sources/insideroot4.sh" "/sources/insideroot5.sh"; do
 	echo "RUNNING $script IN CHROOT ENVIRONMENT...."
 	sleep 3
 	sudo chroot "$LFS" /usr/bin/env  \
